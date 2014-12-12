@@ -7,6 +7,25 @@
 
   <body data-ng-app="Todo">
 
+    <div class="page-container" ng-controller="TodoCtrl">
+      <h2>Another Todo List</h2>
+
+      <ul class="todo-list" ng-repeat="todo in todos">
+        <li>
+          <span>{{todo}}</span>
+          <button class="bt bt-achieve" ng-click="completed(todo)">Done</button>
+        </li>
+      </ul>
+
+      <ul class="add-todo">
+        <li>
+          <input type="text" class="add-todo" placeholder="add todo..." ng-model="newTodo">
+          <button class="bt bt-achieve" ng-click="add($event)">+</button>
+        </li>
+      </ul>
+
+    </div>
+
     <script src="js/angular.min.js"></script>
     <script src="js/script.js"></script>
   </body>
