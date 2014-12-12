@@ -16,8 +16,14 @@ var app = angular.module('Todo', [])
   };
 
   $scope.add = function(e){
-    $scope.todos.push($scope.newTodo);
-    $scope.newTodo = '';
+    if(e.keyCode && e.keyCode === 13){
+      $scope.todos.push($scope.newTodo);
+      $scope.newTodo = '';
+    }
   };
+
+  $scope.getTotal = function(){
+    return $scope.todos.length;
+  }
 
 });

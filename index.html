@@ -8,7 +8,9 @@
   <body data-ng-app="Todo">
 
     <div class="page-container" ng-controller="TodoCtrl">
-      <h2>Another Todo List</h2>
+      <h2 class="title">Another Todo List</h2>
+
+      <h2>You have <span class="emphasis">{{getTotal()}}</span> things to do</h2>
 
       <ul class="todo-list" ng-repeat="todo in todos">
         <li>
@@ -19,8 +21,7 @@
 
       <ul class="add-todo">
         <li>
-          <input type="text" class="add-todo" placeholder="add todo..." ng-model="newTodo">
-          <button class="bt bt-achieve" ng-click="add($event)">+</button>
+          <input type="text" class="text" placeholder="add todo..." ng-model="newTodo" ng-keyup="add($event)">
         </li>
       </ul>
 
