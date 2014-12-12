@@ -1,16 +1,47 @@
 body {
   font-family: 'Roboto', Arial;
   font-weight: 100;
+  background-color: rgba(81, 151, 62, 0.8);
+  background: rgba(81, 151, 62, 0.8);
+  color: white;
+}
+
+.title {
+  font-size: 3em;
 }
 
 .page-container {
   width: 90%;
   margin: 0 auto;
+  text-align: center;
 }
 
 .todo-list {
-  list-style-type: none;
+  list-style: none;
   text-align: left;
+  padding-left: 250px;
+}
+
+.todo-list li {
+  padding: 10px 80px 10px 10px;
+  margin: 4px 0;
+  border: 1px solid white;
+  width: 60%;
+  position: relative;
+  min-height: 100%;
+  cursor: pointer;
+}
+
+.todo-list li .bt {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+.todo-list li .bt:hover {
+  width: 80px;
 }
 
 .bt {
@@ -27,5 +58,29 @@ body {
 
 .add-todo {
   padding: 10px;
+  border-radius: 15px;
   list-style: none;
+  text-align: left;
+  padding-left: 250px;
+  width: 88.2%;
+}
+
+.text {
+  background: transparent;
+  outline: none;
+  padding: 10px;
+  margin: 4px 0;
+  border: 1px solid white;
+  width: 60%;
+  font-size: 30px;
+  color: white;
+}
+
+::-webkit-input-placeholder {
+   color: white;
+}
+
+.emphasis {
+  font-family: vast-shadow, sans-serif;
+  font-size: 2em;
 }
